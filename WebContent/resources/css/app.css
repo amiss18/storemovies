@@ -1,0 +1,129 @@
+
+:root{
+    --main-color:#f57e07;
+}
+body {
+	padding-top:38px;
+	
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(11, 1%, 90%);
+    min-height:310px;
+
+}
+
+.bg-main{
+	background:  #f57e07 !important;
+}
+
+.movie-synopsis{
+	height:110px;
+	margin-bottom:20px;
+}
+
+
+textarea {
+  white-space: pre-line;
+}
+
+
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color:var(--main-color);
+    border-color: var(--main-color);
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.backside {
+  
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 14px;
+    color:  var(--main-color) !important;
+}
+
+
+.backside .card abbr {
+    font-size: 12px;
+    color:  var(--main-color) !important;
+    padding:0;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color:  var(--main-color) !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+/* ================== frorm======================== */
+.form-upload{
+	background: #f2f2f2;
+	margin: 30px 2px;
+	padding: 8px 48px;
+	border:1px solid  #f2f5f5;
+	box-shadow:  3px 3px 5px 6px #ccc;
+}
+
+textarea {
+	white-space: pre-line;
+}
+
+.form-edit .row:nth-child(odd) .line {
+	border-left: 4px solid #f57e07;
+}
+
+.form-edit .row:nth-child(even)  .line {
+	border-left: 4px solid #f0117d;
+}
