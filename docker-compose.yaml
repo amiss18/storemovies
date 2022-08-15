@@ -1,0 +1,27 @@
+db:
+  image: mysql:latest
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: subtitles_db
+    MYSQL_USER: toto
+    MYSQL_PASSWORD: bd
+  ports:
+    - "3307:3306"
+  volumes:
+   - ./:/docker-entrypoint-initdb.d
+
+web:
+  image: tomcat:9
+  # Environment variables do not appear to be getting loaded the first time Tomcat starts!
+  environment:
+    JDBC_URL: jdbc:mysql://db:3307
+    JDBC_USER: toto
+    JDBC_PASS: bd
+    DATABASE_NAME: subtitles_db
+  ports:
+   - "82:8080"
+  volumes:
+   - ./build/storemovies.war:/usr/local/tomcat/webapps/storemovies.war
+  links:
+    - db
+  restart: always
